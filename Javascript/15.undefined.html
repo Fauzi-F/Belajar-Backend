@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Undefined adalah variable atau property dalam object yang belum memiliki data, maka nilai tersebut akan menghasilkan undefined
+
+      let name = "John";
+      if (name === undefined) {
+        console.info("VARIABLE NAME UNDEFINED");
+      } else {
+        console.info("VARIABLE NAME DEFINED");
+      }
+
+      const names = ["Muhamad", "Al", "Fauzi"];
+      delete names[1];
+
+      if (names[1] === undefined) {
+        console.info("ARRAY UNDEFINED");
+      } else {
+        console.info("ARRAY DEFINED");
+      }
+
+      const person = {
+        name: "John",
+      };
+      if (person.name === undefined) {
+        console.info("OBJECT UNDEFINED");
+      } else {
+        console.info("OBJECT DEFINED");
+      }
+    </script>
+  </body>
+</html>

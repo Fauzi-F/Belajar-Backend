@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        STRING TEMPLATE
+        adalah menambahkan data dari luar string seperti variable atau operasi matematika dengan tanda backtick (``)
+        */
+
+        const firstName = "Muhamad";
+        const middleName = "Al";
+        const lastName = "Fauzi";
+        const nilai = 80;
+
+        const fullName = `Name : ${firstName} ${middleName} ${lastName}`;
+
+        const annouce = `Name : ${fullName}, lulus : ${nilai > 70}`;
+
+        console.info(fullName);
+        console.info(annouce);
+
+        /* 
+        String backtick juga support string multiline*/
+
+        const multiline = 
+        `halo,
+        nama saya,
+        Fauzi,
+        Saya sedang,
+        Belajar JavaScript,
+        Terima kasih.`;
+
+        document.writeln("<pre>");
+        document.writeln(multiline);
+        document.writeln("</pre>");
+        // Elemen HTML <pre> mewakili teks yang telah diformat sebelumnya yang akan ditampilkan persis seperti yang tertulis dalam berkas HTML.
+    </script>
+</body>
+</html>

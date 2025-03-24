@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Operator Aritmatika
+        + = pertambahan
+        - = pengurangan
+        * = perkalian
+        ** = eksponensial (pangkat)
+        / = pembagian
+        % = sisa bagi (modulo)
+        */
+
+        let result = 1 + 2;
+        document.writeln("<p> 1 + 2 = " + result + "</p>");
+
+        result = result - 1;
+        document.writeln("<p> 3 - 1 = " + result + "</p>");
+
+        result = result * 2;
+        document.writeln("<p> 2 * 2 = " + result + "</p>");
+
+        /* 
+        OPERATOR AUGMENTED ASSIGNMENT
+        Jika perhitungan manipulasi dengan diri sendiri bisa dilakukan augmented assignment
+
+        contoh :
+        1. result = result + 10 maka bisa ditulis menjadi result += 10
+        2. result = result - 10 maka bisa ditulis menjadi result -= 10
+        3. result = result * 10 maka bisa ditulis menjadi result *= 10
+        4. result = result ** 10 maka bisa ditulis menjadi result **= 10
+        dan seterusnya.
+        */
+       result *= 5;
+        document.writeln("<p> 4 * 5 = " + result + "</p>");
+
+        /* 
+        OPERATOR UNARY
+        Operator unary adalah operator yang hanya memerlukan satu operand saja.
+        Contoh :
+        1. + (menandakan nilai positif)
+        2. - (menandakan nilai negatif)
+        3. ++ (increment, menambahkan 1 angka)
+        4. -- (decrement, mengurangi 1 angka)
+        */
+
+        result--;
+        document.writeln("<p> 20-- = " + result + "</p>");
+
+        result++;
+        document.writeln("<p> 19++ = " + result + "</p>");
+    </script>
+</body>
+</html>

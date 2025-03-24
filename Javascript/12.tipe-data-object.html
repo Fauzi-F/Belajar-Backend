@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        nama: "Fauzi",
+        "alamat rumah": "Tangerang",
+        umur: 33,
+      };
+
+      //   // ubah property / attribute
+      //   person["nama"] = "Fauzi";
+      //   person["alamat"] = "Tangerang";
+      //   person["umur"] = 30;
+
+      console.table(person);
+
+      // mengakses atribut object
+      console.info(`nama: ${person.nama}`);
+      console.info(`alamat: ${person["alamat rumah"]}`);
+      console.info(`umur: ${person.umur}`);
+
+      delete person["umur"];
+
+      console.table(person);
+    </script>
+  </body>
+</html>

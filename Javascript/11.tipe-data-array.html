@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      TIPE DATA ARRAY
+      Array pada javascript tidak perlu inisiasi di awal sehingga bisa digunakan sebanyak yang kita mau hanya perlu menambahkan datanya saja pada data array.
+
+      Array pada javascript juga dynamic type sehingga dalam 1 array bisa berisi berbagai tipe data.
+
+      Operasi di Array:
+      1. array.push(value) : menambah data ke array
+      2. array.length : mendapatkan panjang array
+      3. array[index] : mendapat data di posisi index
+      4. array[index] = value : mengubah data di posisi index
+      5. delete array[index] : menghapus data di posisi index, namun index tidak bergeser
+      */
+
+      let arrayKosong = [];
+      let arrayNama = ["Muhamad", "Al", "Fauzi"];
+
+      const names = [];
+      names.push("Muhamad 1");
+      names.push("Al 1", "Fauzi 222");
+      names.push("Budi", "Joko");
+      console.table(arrayNama);
+      console.table(names);
+
+      console.info(names[0]);
+      console.info(names[1]);
+      console.info(names[2]);
+
+      names[0] = "Programmer";
+      names[1] = "Zaman";
+      names[2] = "Now";
+      console.table(names);
+
+      delete names[3];
+
+      console.table(names);
+
+      names.push("Fauzi");
+
+      console.table(names);
+
+      names[3] = "Fauzi Juga";
+
+      console.table(names);
+      
+      names.push(["Array 1", "Array 2", "Array 3"]);
+
+      console.table(names);
+    </script>
+  </body>
+</html>

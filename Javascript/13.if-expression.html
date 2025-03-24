@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const examValue = 71;
+
+      if (examValue > 80) {
+        document.writeln("Good Job : A");
+      } else if (examValue > 70) {
+        document.writeln("Good Job : B");
+      } else if (examValue > 60) {
+        document.writeln("Good Job : C");
+      } else {
+        document.writeln("Try again next time");
+      }
+
+      // Latihan 1
+      let nilai = 50;
+
+      if (nilai > 100 || nilai < 0) {
+        document.writeln("Inputan nilai diluar range 0-100");
+      } else if (nilai >= 90) {
+        document.writeln("Nilai anda : A");
+      } else if (nilai >= 80) {
+        document.writeln("Nilai anda : B");
+      } else if (nilai >= 70) {
+        document.writeln("Nilai anda : C");
+      } else if (nilai >= 60) {
+        document.writeln("Nilai anda : D");
+      } else {
+        document.writeln("Nilai anda : E");
+      }
+
+      // Latihan 2
+      let waktuParkir = 6;
+      let biaya = 0;
+
+      if (waktuParkir < 0) {
+        document.writeln("Mohon masukkan angka 0 atau lebih");
+      } else if (waktuParkir > 10) {
+        biaya = 20000;
+      } else if (waktuParkir >= 6) {
+        biaya = 10000;
+      } else if (waktuParkir >= 3) {
+        biaya = 5000;
+      }
+
+      document.writeln("Biaya parkir : Rp. " + biaya.toLocaleString("id-ID"));
+
+      // Latihan 3
+      let tahun = 2025;
+
+      if ((tahun % 4 == 0 && tahun % 100 != 0) || tahun % 400 == 0) {
+        document.writeln(`${tahun} adalah Tahun Kabisat`);
+      } else {
+        document.writeln(`${tahun} bukan Tahun Kabisat`);
+      }
+
+      // Latihan 4
+      let umur = 100;
+
+      if (umur < 0) {
+        document.writeln("Data Umur tidak valid");
+        return;
+      } else if (umur >= 60) {
+        document.writeln(`Umur ${umur} tahun masuk Kategori Lansia`);
+      } else if (umur >= 18) {
+        document.writeln(`Umur ${umur} tahun masuk Kategori Dewasa`);
+      } else if (umur >= 13 && umur <= 59) {
+        document.writeln(`Umur ${umur} tahun masuk Kategori Remaja`);
+      } else if (umur >= 6) {
+        document.writeln(`Umur ${umur} tahun masuk Kategori Anak-Anak`);
+      } else {
+        document.writeln(`Umur ${umur} tahun masuk Kategori Balita`);
+      }
+
+      // Latihan 5: Kalkulator Diskon
+      let totalBelanja = 100000;
+      let diskon =
+        totalBelanja >= 500000
+          ? 0.2
+          : totalBelanja >= 250000
+          ? 0.1
+          : totalBelanja >= 100000
+          ? 0.05
+          : 0;
+
+      let angkaDiskon = totalBelanja * diskon;
+      let perluDibayar = totalBelanja - angkaDiskon;
+
+      document.writeln(`Total Belanja: Rp ${totalBelanja.toLocaleString("id-ID")}<br>`);
+      document.writeln(`Diskon ${diskon * 100}%: Rp ${angkaDiskon.toLocaleString("id-ID")}<br>`);
+      document.writeln(`Total yang harus dibayar: Rp ${perluDibayar.toLocaleString("id-ID")}`);
+
+      // latihan 6 menghitung BMI
+      let berat = 80;
+      let tinggi = 1.35;
+      const bmi = berat / Math.pow(tinggi, 2);
+      let kategori =
+        bmi >= 30 ? "Obesitas" : bmi >= 25 ? "Overweight" : bmi >= 18.5 ? "Normal" : "Kurus";
+
+      console.log(`Kategori BMI anda : ${kategori}`);
+    </script>
+  </body>
+</html>

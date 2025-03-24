@@ -8,6 +8,7 @@ git remote add origin https://github.com/Fauzi-F/test1.git (change link on your 
 git push -u origin main
 
 2. Commit Update File On Existing File Github
-- git status (for check new file)
-- git add . or git add resources/... (add from resources based on status bottom)
-- git push or git push -u origin (branch)
+- git status (for check new file untracked)
+- git add . or git add "resources/..." (add from resources based on status ex : "New folder/status.txt")
+- git commit -m "commit comment"
+- git push or git push -u origin (change to your branch)

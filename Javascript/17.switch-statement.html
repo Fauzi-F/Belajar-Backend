@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // switch statement percabangan yang sama dengan if, namun lebih sederhana, kondisi switch statement hanya untuk perbandingan ==
+
+      const nilai = "D";
+      const status =
+        nilai === "A"
+          ? "Sangat Baik"
+          : nilai === "B" || nilai === "C"
+          ? "Baik"
+          : nilai === "D"
+          ? "Kurang"
+          : "Tidak Lulus";
+      switch (nilai) {
+        case "A":
+          console.log(status);
+          break;
+        case "B":
+          console.log(status);
+          break;
+        case "C":
+          console.log(status);
+          break;
+        default:
+          console.log(status);
+      }
+    </script>
+  </body>
+</html>
