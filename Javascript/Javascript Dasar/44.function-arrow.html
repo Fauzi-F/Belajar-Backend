@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        ARROW FUNCTION
+        Alternatif pembuatan function dengan menggunakan tanda =>
+        */
+
+      // 1. contoh arrow function
+      {
+        let sayHello = (firstname, Lastname) => {
+          const say = "Hello " + firstname + " " + Lastname;
+          console.info(say);
+        };
+
+        sayHello("Muhamad", "Fauzi");
+      }
+
+      // 2. contoh arrow function lebih ringkas tanpa blok {} dengan ketentuan hanya 1 baris kode saja
+      {
+        let sayHello2 = (firstname, Lastname) =>
+          console.info("Hello " + firstname + " " + Lastname);
+
+        sayHello2("Budi", "Airlangga");
+      }
+
+      // 3. contoh arrow function dengan 1 parameter, bisa tanpa tanda kurung ()
+      {
+        let sayHello3 = name => console.info(`Hello ${name}`);
+
+        sayHello3("Fauzi");
+      }
+      // 4. contoh arrow function mengembalikan value, jika menggunakan blok {} maka perlu kata kunci return
+      {
+        const sum = (first, second) => {
+          return first + second;
+        };
+
+        console.info(sum(100, 100));
+      }
+      // 5. contoh arrow function mengembalikan value, jika tidak menggunakan blok {} maka tidak perlu kata kunci return
+      {
+        const sum2 = (first, second) => first + second;
+
+        console.info(sum2(200, 200));
+      }
+
+      // 6. contoh arrow function sebagai Parameter
+      {
+        function giveMeName(callback) {
+          callback("Muhamad");
+        }
+
+        giveMeName(name => console.info(`Hello ${name}`));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        SCOPE
+        Scope merupakan area akses sebuah data, ada dua jenis scope yaitu global scope dan local scope.
+
+        - Local Scope : data yang berada di dalam sebuah function
+        - Global Scope : data yang dibuat seperti biasanya diluar function
+
+        Data global scope bisa diakses dari local scope, namun data local scope hanya bisa diakses dari local scope atau di scope local dibawahnya (dalam kasus function dalam function).
+
+        Untuk kasus nested function scope, function di dalam function bisa mengakses data dari scope function di atasnya, sementara function di atas tidak bisa mengakses data scope function di bawahnya.
+        */
+
+      // contoh Global Scope
+      let counter = 0; // data ini bisa diakses dari manapun
+
+      function hitMe() {
+        // local scope hitMe
+        counter++;
+      }
+
+      function other() {
+        // local scope other
+      }
+
+      hitMe();
+      hitMe();
+
+      console.info(counter);
+
+      function first() {
+        // local scope first
+        let firstVariable = "First";
+        console.info(firstVariable);
+
+        function firstNested() {
+          // local scope firstNested, tidak bisa diakses oleh first function
+          let firstNestedVariable = "Nested";
+          console.info(firstVariable + " " + firstNestedVariable); // bisa mengakses data dari scope function di atasnya
+        }
+
+        return firstNested;
+      }
+
+      function second() {
+        // local scope second
+        let secondVariable = "Second";
+        console.info(secondVariable);
+      }
+
+      first(); // mengakses function biasa
+      second(); // mengakses function biasa
+
+      const nestedFunction = first();
+      nestedFunction();
+
+      //console.info(firstVariable); // tidak bisa diakses karena di luar scope first
+      // console.info(secondVariable); // tidak bisa diakses karena di luar scope second
+    </script>
+  </body>
+</html>

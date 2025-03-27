@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Parameter pada functino javascript sifatnya opsional, sehingga tidak wajib memasukkan parameter ketika memanggilnya, dan jika memanggil function memasukkan parameter lebih dari yang ditentukan maka tidak terjadi error
+        */
+      function sayHello(firstName, lastName) {
+        document.writeln(`<p>Parameter 1 : ${firstName}</p>`);
+        document.writeln(`<p>Parameter 2 : ${lastName}</p>`);
+      }
+
+      sayHello();
+      sayHello("Muhamad");
+      sayHello("Muhamad", "Fauzi");
+      sayHello("Muhamad", "Fauzi", "1234", "qwerty"); // hanya 2 parameter awal yang muncul
+    </script>
+  </body>
+</html>

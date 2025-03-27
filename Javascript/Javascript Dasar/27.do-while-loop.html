@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       DO WHILE LOOP
+       sama seperti perulangan while-loop hanya saja pengecekan kondisi dilakukan di awal perulangan, sedangkan while-loop pengecekan kondisi dilakukan di akhir perulangan.
+
+       Jadi Do While Loop minimal eksekusi sekali selanjutnya baru mengecek kondisi.
+
+       Sedangkan While Loop mengecek kondisi terlebih dahulu, jika false maka tidak melakukan eksekusi sama sekali.
+       */
+      let counter = 100;
+      do {
+        document.writeln(`<p>Perulangan Do While Loop Ke-${counter}</p>`);
+        counter++;
+      } while (counter <= 10);
+    </script>
+  </body>
+</html>

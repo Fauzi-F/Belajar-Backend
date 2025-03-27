@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        REST PARAMETER
+        Rest Parameter adalah parameter yang bisa menerima inputan lebih dari 1 dengan cara menambahkan tiga titik sebelum parameter tersebut.
+
+        Syarat Rest Parameter
+        - Hanya boleh satu parameter dalam satu function
+        - Diletakkan pada parameter paling terakhir
+        - Tidak boleh ada parameter default setelahnya
+
+        */
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item; // menambahkan tiap iterasi array data dengan item
+        }
+        document.writeln(`<p>Total ${name} is ${total}</p>`);
+      }
+
+      sum("Orange", 1, 2, 3, 4, 5);
+      sum("Banana", 10, 20, 30);
+      sum("Apple", 100, 200, 300, 400, 500, 600);
+
+      /* contoh di atas adalah data yang diinput dalam jumlah banyak namun satu persatu, bagaimana jika data dalam bentuk array?
+      Caranya bisa menggunakan Spread Syntax, bisa mengconvert data array agar bisa di jabarkan satu-satu agar bisa dilakukan perhitungan
+      */
+
+      // jika tanpa Spread Syntax
+      let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      sum("Semangka", angka); // array angka hanya menampilkan data saja tidak bisa dijumlahkan
+
+      // jika menggunakan Spread Syntax, caranya menambahkan titik tiga kali sebelum nama parameter array
+      sum("Nanas Spread Syntax", ...angka); // array di iterasi satu persatu sehingga bisa dijumlahkan
+    </script>
+  </body>
+</html>

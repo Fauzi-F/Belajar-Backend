@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+      Falsy (Falsey) adalah value yang ketika dalam konteks boolean, dia dianggap false. Ini merupakan fitur khusus pada javascript.
+      Jadi di javascript, koondisi diluar boolean bisa dianggap juga seperti boolean yakni beberapa data dianggap false dan beberapa data dianggap true.
+
+      Data kategori falsy:
+      1. null atau undefined
+      2. 0, -0, 0.0 (-1, -2, -3 dst tidak falsy)
+      3. "", '', `` (string kosong dianggap false)
+      4. NaN (Not a Number)
+      
+      Data kategori truthy : adalah data selain falsy
+      */
+
+      let data = 0.0;
+
+      if (data) {
+        document.writeln("DATA TRUE");
+      } else {
+        document.writeln("DATA FALSE");
+      }
+    </script>
+  </body>
+</html>

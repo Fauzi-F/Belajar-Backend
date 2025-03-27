@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // return 1 value
+      function sayHello(firstname, lastName) {
+        const say = `Hello, ${firstname} ${lastName}`;
+        return say;
+      }
+
+      const result = sayHello("Muhamad", "Fauzi");
+      document.writeln(result);
+
+      // return lebih dari 1 value
+      function getFinalValue(value) {
+        if (value > 90) {
+          return "A";
+        } else if (value > 80) {
+          return "B";
+        } else if (value > 70) {
+          return "C";
+        } else {
+          return "D";
+        }
+      }
+      const finalValue = getFinalValue(77);
+      document.writeln(finalValue);
+
+      // return bisa menghentikan jalannya program
+      function isContains(array, searchValue) {
+        for (const element of array) {
+          console.info(`Iterasi Element ${element}`); //meskipun angka 4 ada 2 kali, hanya akan di tampilkan 1 kali sebagai bukti return akan berhentikan jalannya program
+          if (element === searchValue) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      const array = [1, 2, 3, 4, 5, 6, 7, 4, 8, 9];
+      const search = 4;
+      const found = isContains(array, search);
+      document.writeln(found);
+    </script>
+  </body>
+</html>

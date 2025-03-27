@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        Function bisa dijadikan sebagai value, yaitu dimasukkan ke dalam variable, dengan fungsi function yang sama.
+        */
+
+      function sayHello(name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      }
+
+      sayHello("Fauzi"); //dipanggil sebagai function
+
+      const say = sayHello; //jadikan value dalam variable, namun tanpa memasukkan tanda kurung
+
+      say("Fauzi"); // memanggil variable say yang berisi function dengan artian memanggil function di dalam variable
+
+      /* 
+      Selain itu, function yang di dalam variable juga bisa dijadikan parameter dalam function lainnya.
+
+      Hal ini menandakan bahwa function pada JavaScript sangatlah fleksibel
+      */
+
+      function giveMeName(callback) {
+        callback("Fauzi");
+      }
+
+      giveMeName(sayHello); // outputnya memanggil function sayHello dengan gabungkan pada function callback
+      giveMeName(say); // memanggil dari variable, outputnya sama
+    </script>
+  </body>
+</html>

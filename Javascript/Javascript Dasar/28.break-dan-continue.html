@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        BREAK & CONTINUE
+        Break digunakan juga pada perulangan, digunakan untuk menghentikan seluruh perulangan.
+
+        Continue berbeda dengan break, continue digunakan untuk melompati satu iterasi saja, yaitu menghentikan perulangan saat ini dan melanjutkan perulangan selanjutnya.
+        */
+
+      // CONTOH BREAK
+      let counter = 0;
+      while (true) {
+        document.writeln(`<p>Perulangan ke-${counter}</p>`);
+        counter++;
+
+        if (counter > 10) {
+          break;
+        }
+      }
+
+      // CONTOH CONTINUE
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 !== 0) {
+          continue;
+        }
+        document.writeln(`<p>Perulangan Genap Ke-${i}</p>`);
+      }
+    </script>
+  </body>
+</html>

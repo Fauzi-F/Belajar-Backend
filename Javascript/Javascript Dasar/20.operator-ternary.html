@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        Ternary operator cara cepat untuk membuat logika if statement, outputnya true atau false sama seperti if statement.
+
+        */
+
+      // contoh if tanpa ternary operator
+      const nilai = 80;
+      let ucapan;
+
+      if (nilai >= 75) {
+        ucapan = "Anda Lulus";
+      } else {
+        ucapan = "Anda Tidak Lulus";
+      }
+
+      document.writeln(ucapan);
+
+      // contoh if statement menggunakan ternary operator
+      document.writeln(ucapan);
+      ucapan = nilai >= 75 ? "Anda Lulus" : "Anda Tidak Lulus";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+          Operator Logika pada Data Non Boolean adalah operator logika yang digunakan untuk mengoperasikan data non boolean (data yang bukan boolean) menjadi boolean.
+
+          operator logika OR(||), mengambil nilai truthy paling awal, jika tidak ada nilai truthy maka mengambil nilai falsy paling akhir
+
+          operator logika AND(&&), mengambil nilai falsy paling awal, jika tidak ada yang falsy maka mengambil nilai truthy paling akhir
+          */
+
+      // contoh operator logika OR(||), mengambil nilai truthy paling awal, jika tidak ada nilai truthy maka mengambil nilai falsy paling akhir
+      console.info("Hello" || ""); // hasilnya Hello, nilai truthy yang pertama
+      console.info("" || []); // hasilnya [], karena string kosong ("") adalah falsy, sehingga diambil yang truthy saja
+      console.info("0" || "NOL"); // hasilnya "0" nilai truthy yang paling pertama, meskipun dua-duanya truthy
+      console.info(0 || "NOL"); // hasilnya "NOL", karena 0 adalah falsy
+      console.info(null || "NULL"); // hasilnya "NULL", karena null adalah falsy
+      console.info(undefined || "UNDEFINED"); // hasilnya "undefined", karena undefined adalah falsy
+      console.info(0 || false); // hasilnya false, walaupun keduanya falsy, namun operator logika non boolean mengambil false paling akhir
+
+      // contoh operator logika AND(&&), mengambil nilai falsy paling awal, jika tidak ada yang falsy maka mengambil nilai truthy paling akhir
+
+      console.info("Hello" && "");
+      console.info("" && []);
+      console.info("0" || "NOL");
+      console.info(0 || "NOL");
+      console.info(null || "NULL");
+      console.info("undefined" || "null");
+    </script>
+  </body>
+</html>

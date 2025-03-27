@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        FUNCTION GENERATOR
+        Adalah function yang digunakan untuk membuat data generator.
+        Generator adalah data yang bisa di iterasi seperti Array.
+        caranya cukup gunakan tanda bintang (*) setelah kata function.
+        Untuk mengembalikan data ditiap iterasi, gunakan kata kunci yield diikuti datanya.
+
+        Function Generator keunggulannya adalah mengeluarkan data sesuai kebutuhan, seperti membuat id bertahap secara otomatis tanpa batas, stok barang ecommerce yang butuh diupdate secara berkala, simulasi loading animasi setiap 1 detik yield nya diubah, dll.
+        
+        Karena Function Generator bersifat "Lazy", jadi keunggulan diatas bisa diaplikasikan dengan sangat baik.
+
+        function bawaan generator adalah .next().value untuk mengambil data selanjutnya
+        */
+
+      // contoh function generator membuat id generator otomatis
+      function* idGenerator() {
+        let id = 1;
+        while (true) {
+          yield `User-${id++}`;
+        }
+      }
+
+      const userID = idGenerator();
+
+      console.log(userID.next().value); // "User-1"
+      console.log(userID.next().value); // "User-2"
+      console.log(userID.next().value); // "User-3"
+      console.log(userID.next().value); // "User-4", dst.
+
+      // contoh function generator stok barang berkurang setiap penjualan
+      function* stokBarang(stok) {
+        while (stok > 0) {
+          yield `Barang terjual! Sisa stok: ${--stok}`;
+        }
+        yield "Stok habis!";
+      }
+
+      const stok = stokBarang(5);
+
+      console.log(stok.next().value); // "Barang terjual! Sisa stok: 2"
+      console.log(stok.next().value); // "Barang terjual! Sisa stok: 1"
+      console.log(stok.next().value); // "Barang terjual! Sisa stok: 0"
+      console.log(stok.next().value); // "Stok habis!"
+
+      /* 
+      Function Generator juga bisa mengambil data secara keseluruhan menggunakan for of namun ini tidak cocok dengan sifat generator, baiknya pakai function biasa saja atau menggunakan array
+      */
+
+      function* buatGanjil(value) {
+        for (let i = 1; i <= value; i++) {
+          if (i % 2 !== 0) {
+            yield i;
+          }
+        }
+      }
+
+      const ganjil = buatGanjil(100);
+      for (const number of ganjil) {
+        console.log(number);
+      }
+    </script>
+  </body>
+</html>

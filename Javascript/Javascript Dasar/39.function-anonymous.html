@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        FUNCTION ANONYMOUS
+        Function Anonymous merupakan function yang tidak diberikan identitas nama function.
+        Function Anonymous bisa diterapkan menjadi value sebuah variabel ataupun masukkan ke dalam sebuah parameter.
+        */
+
+      // Function Anonymous di variabel
+      const say = function (name) {
+        document.writeln(`<p>Hello ${name}</p>`);
+      };
+
+      say("Fauzi");
+      say("Budi");
+
+      // Function Anonymoous di Parameter
+      function giveMeName(callback) {
+        callback("Eko");
+      }
+
+      giveMeName(function (name) {
+        document.writeln(`<p>Hi ${name}</p>`);
+      });
+    </script>
+  </body>
+</html>

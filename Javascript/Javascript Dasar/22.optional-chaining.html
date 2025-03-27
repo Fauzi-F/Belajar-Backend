@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Optional Chaining Operator (?) - digunakan untuk mengecek apakah suatu objek atau properti merupakan data nullish (null or undefined) atau tidak.
+        Karena data nullish pada objek atau properti akan menimbulkan error ketika diakses, sehingga operator ini memberikan nilai undefined jika data nullish.
+        */
+
+      const person = {
+        address: {
+          city: "Tangerang",
+          province: "Banten",
+        },
+      };
+
+      let city = person?.address?.city; // digunakan untuk mengecek apakah objek person atau property person.address merupakan data nullish
+      document.writeln(city);
+
+      let province = person.address.province; // contoh yang tidak menggunakan operator optional chaining
+      document.writeln(province);
+
+      let country = person?.address?.country; // digunakan untuk mengecek apakah objek person atau property merupakan data nullish.
+      document.writeln(country); // output undefined jika menggunakan optional-chaining, jika tanpa optional-chaining maka akan error
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        For Loop
+        Blok kode yang berada dalam for loop akan selalul di eksekusi selama kondisi for terpenuhi.
+        
+        cara penulisan:
+        for(init statement; kondisi; post statement){
+        block perulangan
+        }
+
+        * init statement hanya dieksekusi sekali di awal sebelum perulangan
+        * kondisi akan dilakukan pengecekan dalam setiap perulangan, jika kondisi true maka perulangan akan dilakukan kembali, jika kondisi false maka perulangan akan berhenti.
+        * post statement akan dieksekusi setiap kali diakhir perulangan
+        * init statement, kondisi, dan post statement tidak wajib diisi, jika kondisi tidak diisi berarti kondisi selalu true dan loop akan berjalan terus.
+        */
+
+      // contoh yang tidak diisi init statement, kondisi, dan post statement, hasilnya akan terus berulang
+
+      //   for (;;) {
+      //     alert("For Loop");
+      //   }
+
+      // contoh yang diisi hanya kondisi saja
+      let counter = 1;
+      for (; counter <= 20; ) {
+        document.writeln(`<p> Perulangan ke-${counter}</p>`);
+        counter++;
+      }
+
+      // contoh yang diisi init statement dan kondisi
+      for (let counter = 1; counter <= 20; ) {
+        document.writeln(`<p> Perulangan ke-${counter}</p>`);
+        counter++;
+      }
+
+      // contoh yang diisi init statement, kondisi, dan post statement
+      for (let counter = 1; counter <= 20; counter++) {
+        document.writeln(`<p> Perulangan ke-${counter}</p>`);
+      }
+    </script>
+  </body>
+</html>

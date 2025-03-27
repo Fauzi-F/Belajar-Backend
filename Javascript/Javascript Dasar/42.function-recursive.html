@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        RECURSIVE FUNCTION
+        Adalah konsep yang digunakan untuk memanggil fungsi itu sendiri.
+        */
+
+      // contoh tanpa recursive function
+      function factorial(value) {
+        let result = 1;
+        for (let i = 1; i <= value; i++) {
+          result *= i;
+        }
+        return result;
+      }
+
+      console.info(factorial(5));
+      console.info(1 * 2 * 3 * 4 * 5);
+
+      // contoh function recursive
+      function factorialRecursive(value) {
+        if (value === 1) {
+          return 1;
+        } else {
+          return value * factorialRecursive(value - 1);
+        }
+      }
+
+      console.info(factorialRecursive(7));
+
+      // contoh recursive deret fibonacci
+      function deretFibonacci(value) {
+        if (value === 0) {
+          return 0;
+        } else if (value === 1) {
+          return 1;
+        } else {
+          return deretFibonacci(value - 1) + deretFibonacci(value - 2);
+        }
+      }
+
+      console.log(`Deret Fibonacci : ${deretFibonacci(15)}`);
+
+      // contoh recursive perulangan 1 - 10
+      function perulangan(value) {
+        if (value < 1) return;
+        perulangan(value - 1);
+        console.log(value);
+      }
+
+      perulangan(10);
+      //
+    </script>
+  </body>
+</html>

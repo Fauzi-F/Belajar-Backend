@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Default Value jika parameter tidak di input pada pemanggilan function
+        */
+
+      function register(name, gender = "UNKNOWN") {
+        console.info(name);
+        console.info(gender);
+      }
+
+      register();
+      register("Fauzi");
+      register("Fauzi", "Pria");
+      register("Fauzi", undefined); // jika isi undefined maka yang keluar tetap default UNKNOWN, karena undefined berarti masih belum ada isinya
+      register("Fauzi", null); // jika isi null maka yang keluar adalah null, karena null dianggap ada isinya hanya saja data akosong
+      
+    </script>
+  </body>
+</html>
