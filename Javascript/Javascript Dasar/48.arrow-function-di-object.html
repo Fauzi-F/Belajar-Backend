@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* ARROW FUNCTION di OBJECT
+        Arrow Function bisa digunakan di dalam object, namun banyak keterbatasan.
+
+        Salah satunya adalah tidak dapat mengakses kata kunci this, kata kunci super, argument object dan function generator
+
+        Jadi pastikan gunakan Arrow Function di object hanya jika tidak perlu mengakses kata kunci di atas */
+
+      // arrow function dalam object method
+      const person = {
+        name: "John",
+        sayHello: (name) => {
+          console.info(`Hello ${name}`);
+        },
+      };
+    </script>
+  </body>
+</html>

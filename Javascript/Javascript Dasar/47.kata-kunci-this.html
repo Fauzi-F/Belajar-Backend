@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 
+        Kata Kunci THIS
+        This keyword digunakan untuk mengacu pada objek yang sedang dipanggil.
+        Jika this dipanggil dalam global scope atau local scope, maka this mengacu kepada windo (browser).
+        Jika this dipanggil dalam objek, maka this mengacu kepada objek itu sendiri
+
+        Oleh karena itu this sering digunakan dalam sebuah objek
+        */
+
+      // contoh
+      const person = {
+        name: "Fauzi",
+        sayHello: function (value) {
+          console.info(`Hello ${value}, My Name is ${this.name}`);
+        },
+      };
+
+      person.sayHello("Budi");
+    </script>
+  </body>
+</html>

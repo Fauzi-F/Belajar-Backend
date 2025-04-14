@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        CLOSURE
+        Closure dapat membuat sebuah function baru yang dapat mengakses variable yang ada di luar function tersebut.
+        Closure function perannya adalah mengunci data function utama (outer function) dan mengolahnya di dalam function baru (closure/inner function)
+        */
+
+      // contoh 1
+      function greeting(name) {
+        return function (message) {
+          console.log(`${message}, ${name}!`);
+        };
+      }
+
+      const greetFauzi = greeting("Fauzi");
+
+      console.info(greetFauzi("Selamat pagi"));
+      console.info(greetFauzi("Halo"));
+      console.info(greetFauzi("GM"));
+      console.info(greetFauzi("GN"));
+      console.info(greetFauzi("Good Bye"));
+
+      // contoh kompleks
+      function createCounter(value) {
+        let count = 0;
+
+        return {
+          increment: function () {
+            // membuat function sebagai properti, sehingga dapat mengakses seperti properti pada object
+            count += value;
+            console.info(count);
+          },
+          decrement: function () {
+            count -= value;
+            console.info(count);
+          },
+          reset: function () {
+            count = 0;
+            console.info("Counter di reset ke-0");
+          },
+          setValue: function (newValue) {
+            count = newValue;
+            console.info(count);
+          },
+          doubleIncrement: function () {
+            count = count + value * 2;
+            console.info(count);
+          },
+        };
+      }
+      const counter = createCounter(2);
+
+      counter.increment();
+      counter.increment();
+      counter.increment();
+      counter.decrement();
+      counter.decrement();
+      counter.reset();
+      counter.setValue(15);
+      counter.increment();
+      counter.increment();
+      counter.decrement();
+      counter.reset();
+      counter.increment();
+      counter.doubleIncrement();
+      counter.doubleIncrement();
+      counter.doubleIncrement();
+    </script>
+  </body>
+</html>

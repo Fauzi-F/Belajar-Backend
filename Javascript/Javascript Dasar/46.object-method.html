@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      OBJECT METHOD
+      Adalah object yang memiliki function di dalamnya.
+      */
+
+      // contoh membuat function ke dalam object
+      const person = {
+        name: "Fauzi",
+        sayHello: function (name) {
+          alert(`Hello ${name}`);
+        },
+      };
+
+      person.sayHello("Budi");
+
+      // membuat function ke dalam object yang sudah ada
+      const person2 = {
+        name: "Fauzi2",
+      };
+      person2.sayHello = function (name) {
+        alert(`Hello ${name}`);
+      };
+
+      person2.sayHello("Budi2");
+
+      // Object build-in Method : berguna untuk memeriksa, mengubah, atau menyalin objek dengan efisien.
+
+      const user = {
+        name: "John",
+        age: 30,
+      };
+
+      console.info(Object.keys(user));
+    </script>
+  </body>
+</html>

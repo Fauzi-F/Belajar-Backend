@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        GETTER DAN SETTER
+        Getter adalah fungsi yang digunakan untuk mengambil nilai dari suatu properti dalam object.
+        Setter adalah fungsi yang digunakan untuk mengubah nilai dari suatu properti dalam object.
+        */
+
+      const user = {
+        birthYear: 2000,
+
+        get age() {
+          return new Date().getFullYear() - this.birthYear;
+        },
+        set age(value) {
+          const currentYear = new Date().getFullYear();
+          if (value > currentYear) {
+            console.log("Age Cannot Less Then This Year");
+          } else {
+            this.birthYear = value;
+          }
+        },
+      };
+
+      console.log(user.age);
+      user.age = 2026;
+      console.log(user.age);
+    </script>
+  </body>
+</html>
